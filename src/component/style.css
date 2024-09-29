@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+body {
+    
+    margin: 0;
+    padding: 0;
+   
+    color: #333;
+    background: rgb(195,37,106);
+background: radial-gradient(circle, rgba(195,37,106,1) 5%, rgba(83,52,102,1) 65%, rgba(51,27,82,1) 100%);
+}
+h1 {
+    text-align: center;
+    color: #d67728;
+
+ }
+
+  select,
+  input {
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    font-size: 16px;
+    border: none; /* Remove default borders */
+    border-bottom: 2px solid rgba(238, 174, 202, 1); /* Bottom border with RGBA color */
+    padding: 10px; /* Padding for better spacing */
+    outline: none; /* Remove the outline on focus */
+    color: #e76f05;
+    font-size: 16px; /* Font size for text */
+    background: transparent; /* Make background transparent to highlight the border */
+    transition: border-bottom-color 0.3s;
+  }
+
+
+
+
+/* Container for the Application */
+.app-container {
+    max-width: 1200px; /* Increased max-width for larger screens */
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+/* Product Container */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: transparent;
+}
+
+/* Individual Product Card */
+.product-card {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); /* White background for product cards */
+    border: 1px solid rgb(238,174,202); /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 15px; /* Increased padding for better spacing */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Product Image Styles */
+.product-card img {
+    width: 100px; /* Fixed size for product images */
+    height: 100px;
+    border-radius: 5px;
+    background: rgb(238,174,202);
+    object-fit: contain; /* Ensures images maintain their aspect ratio */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increase shadow for depth */
+}
+/* Product Title and Price */
+.product-card h4 {
+    font-size: 1.1em; /* Slightly larger font size */
+    margin: 10px 0; /* Margin for spacing */
+}
+
+.product-card p {
+    font-size: 1em; /* Set font size for price */
+    color: #e74c3c; /* Red color for price */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+/* Pagination Controls */
+.pagination {
+    margin-top: 20px;
+    text-align: center; /* Centering pagination buttons */
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 8px 15px; /* Increased padding for a better touch target */
+    cursor: pointer;
+    border: none; /* No border */
+    border-radius: 5px;
+    background-color: #3498db; /* Primary color for buttons */
+    color: white; /* White text */
+    font-size: 1em; /* Standard font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.pagination button:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.pagination button:disabled {
+    background-color: #bdc3c7; /* Gray for disabled buttons */
+    cursor: not-allowed; /* Not allowed cursor */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(50% - 10px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .pagination button {
+        padding: 5px 10px; /* Smaller buttons on small screens */
+        font-size: 0.9em; /* Smaller font size */
+    }
+}
